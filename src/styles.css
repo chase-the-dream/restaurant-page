@@ -1,13 +1,15 @@
 :root {
-    --first-color: #f70776;
-    --second-color: #c3195d;
-    --third-color: #680747;
-    --fourth-color: #141010;
+    --first-color: #8b5cf6;   /* Purple - for highlights and accents */
+    --second-color: #a78bfa;  /* Light Purple - for secondary elements */
+    --third-color: #6d28d9;   /* Dark Purple - for headers/important elements */
+    --fourth-color: #ffffff;  /* White - main background */
+    --fifth-color: #000000;
 }
 
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
 }
 
 li {
@@ -16,22 +18,27 @@ li {
 
 .menu {
     padding: 0.5rem 2rem;
-    background-color: #f70776;
-    border: 3px black solid;
+    background-color: var(--first-color);
+    border: 3px solid var(--third-color);
     border-radius: 20px;
     margin: 10px;
+    color: var(--fourth-color);
 }
 
 body {
     background-color: var(--fourth-color);
-    color: white;
+    color: var(--fifth-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background-color: #680747;
+    background-color: var(--third-color);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: var(--fourth-color);
 }
 
 .navigation {
@@ -41,5 +48,31 @@ header {
 /* Header Stuff */
 
 h1 {
-    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
 }
+
+.container {
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    background-color: var(--second-color);
+    border: 3px solid var(--third-color);
+    border-radius: 50px;
+    text-align: center;
+}
+
+/* Main content area */
+main {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background-color: var(--third-color);
+    padding: 1rem;
+    text-align: center;
+    border-top: 2px solid var(--first-color);
+    color: white;
+}
+
