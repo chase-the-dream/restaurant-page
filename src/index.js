@@ -21,8 +21,11 @@ function changeContent(pageChoice) {
             </div>
             `;
     }
+    else if(pageChoice == "menu"){
+        content.innerHTML = `<h1>MENU</h1>`;
+    }
     else {
-        content.innerHTML = `<h1>Welcome!</h1>`;
+        content.innerHTML = `<h1>ABOUT</h1>`;
     }
 }
 
